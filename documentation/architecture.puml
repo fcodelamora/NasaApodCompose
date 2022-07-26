@@ -1,0 +1,94 @@
+@startuml
+
+skinparam component{
+    ArrowColor Black
+    borderColor Black
+    ArrowColor<<dev>> Salmon
+    ArrowColor<<Hilt>> Green
+    backgroundColor<<kotlin-library>> Aquamarine
+    backgroundColor<<com.android.library>> YellowGreen
+    backgroundColor<<com.android.application>> LimeGreen
+    backgroundColor<<Gradle KTS>> WhiteSmoke
+}
+
+
+[buildSrc]<<Gradle KTS>>
+[:app]<<com.android.application>>
+
+package "core" {
+    [:core:usecases]<<kotlin-library>>
+    [:core:systems]<<kotlin-library>>
+    [:core:repositories]<<kotlin-library>>
+    [:core:entities]<<kotlin-library>>
+    [:core:datasources]<<kotlin-library>>
+    [:core:apis]<<kotlin-library>>
+}
+
+package "common" {
+    [:common:di]<<com.android.library>>
+    [:common:resources]<<com.android.library>>
+}
+
+package "provide"{
+    [:provide:apis]<<com.android.library>>
+    [:provide:systems]<<com.android.library>>
+    [:provide:repositories]<<com.android.library>>
+    [:provide:datasources]<<com.android.library>>
+    [:provide:mocks:apis]<<com.android.library>>
+}
+
+package "features"{
+    [:features:feature_name]<<com.android.library>>
+}
+
+note bottom of [:core:entities]
+    Dependency applied through many
+    other modules to use its constants
+    and enums in a consistent manner.
+
+    Such dependencies are not pictured
+    in this diagram to reduce clutter.
+end note
+
+[:app] --> [:core:usecases]
+
+[:app] --> [:common:resources]
+[:app] --> [:common:di]
+
+[:app] --> [:provide:systems]
+
+[:app] --> [:features:feature_name]
+
+[:app] --> [:provide:repositories] <<Hilt>>
+[:app] --> [:provide:apis]<<Hilt>>
+[:app] --> [:provide:mocks:apis] <<dev>>
+
+
+[:common:di] --> [:core:repositories]
+[:common:di] --> [:core:usecases]
+
+[:common:resources] --> [:core:usecases]
+
+[:core:usecases] --> [:core:entities]
+[:core:usecases] --> [:core:repositories]
+[:core:usecases] --> [:core:systems]
+
+[:core:repositories] --> [:core:entities]
+[:core:repositories] --> [:core:apis]
+[:core:repositories] --> [:core:datasources]
+
+[:features:feature_name] --> [:common:resources]
+[:features:feature_name]--> [:common:di]
+[:features:feature_name]--> [:core:usecases]
+
+[:provide:apis] --> [:core:apis]
+[:provide:mocks:apis] --> [:core:apis]
+[:provide:datasources] --> [:core:datasources]
+[:provide:systems] --> [:core:systems]
+
+[:provide:repositories] --> [:core:repositories]
+[:provide:repositories] --> [:core:apis]
+[:provide:repositories] --> [:core:datasources]
+[:provide:repositories] --> [:provide:datasources] <<Hilt>>
+
+@enduml

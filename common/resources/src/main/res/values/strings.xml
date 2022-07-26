@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="error_title_application_error">Application Error</string>
+    <string name="error_title_server_error">Server Error</string>
+    <string name="error_title_unknown_error">Unknown Error</string>
+    <string name="error_message_unknown_error">An unknown error has occurred.\nPlease verify that you are connected to the network or try again later.</string>
+</resources>

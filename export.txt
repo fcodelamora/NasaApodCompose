@@ -1,0 +1,128 @@
+LIBRARIES:
+
+Accompanist SwipeRefresh library;com.google.accompanist:accompanist-swiperefresh:0.21.4-beta;Apache-2.0
+Kotlin Stdlib Jdk8;org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.6.10;Apache-2.0
+Kotlin Stdlib Jdk7;org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.6.10;Apache-2.0
+Kotlin Stdlib;org.jetbrains.kotlin:kotlin-stdlib:1.6.10;Apache-2.0
+IntelliJ IDEA Annotations;org.jetbrains:annotations:13.0;Apache-2.0
+Kotlin Stdlib Common;org.jetbrains.kotlin:kotlin-stdlib-common:1.6.10;Apache-2.0
+Accompanist Navigation Animation;com.google.accompanist:accompanist-navigation-animation:0.22.0-rc;Apache-2.0
+Compose Navigation;androidx.navigation:navigation-compose:2.4.0-rc01;Apache-2.0
+Activity Compose;androidx.activity:activity-compose:1.3.1;Apache-2.0
+Activity Kotlin Extensions;androidx.activity:activity-ktx:1.3.1;Apache-2.0
+Android Lifecycle Kotlin Extensions;androidx.lifecycle:lifecycle-runtime-ktx:2.3.1;Apache-2.0
+kotlinx-coroutines-android;org.jetbrains.kotlinx:kotlinx-coroutines-android:1.5.2;Apache-2.0
+kotlinx-coroutines-core;org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:1.5.2;Apache-2.0
+Android Lifecycle Runtime;androidx.lifecycle:lifecycle-runtime:2.4.0-alpha02;Apache-2.0
+Android Lifecycle-Common;androidx.lifecycle:lifecycle-common:2.4.0-alpha02;Apache-2.0
+Support Annotations;androidx.annotation:annotation:1.3.0-alpha01;Apache-2.0
+Android Arch-Common;androidx.arch.core:core-common:2.1.0;Apache-2.0
+Android Lifecycle ViewModel Kotlin Extensions;androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.1;Apache-2.0
+Android Lifecycle ViewModel;androidx.lifecycle:lifecycle-viewmodel:2.3.1;Apache-2.0
+Core Kotlin Extensions;androidx.core:core-ktx:1.7.0;Apache-2.0
+Support compat;androidx.core:core:1.7.0;Apache-2.0
+VersionedParcelable;androidx.versionedparcelable:versionedparcelable:1.1.1;Apache-2.0
+Support collections;androidx.collection:collection:1.1.0;Apache-2.0
+Experimental annotation;androidx.annotation:annotation-experimental:1.1.0;Apache-2.0
+SavedState Kotlin Extensions;androidx.savedstate:savedstate-ktx:1.1.0;Apache-2.0
+Activity;androidx.savedstate:savedstate:1.1.0;Apache-2.0
+Activity;androidx.activity:activity:1.3.1;Apache-2.0
+Android Lifecycle ViewModel with SavedState;androidx.lifecycle:lifecycle-viewmodel-savedstate:2.3.1;Apache-2.0
+Android Lifecycle LiveData Core;androidx.lifecycle:lifecycle-livedata-core:2.3.1;Apache-2.0
+Compose UI primitives;androidx.compose.ui:ui:1.1.0-rc01;Apache-2.0
+Compose Saveable;androidx.compose.runtime:runtime-saveable:1.1.0-rc01;Apache-2.0
+Compose Runtime;androidx.compose.runtime:runtime:1.1.0-rc01;Apache-2.0
+Compose UI Text;androidx.compose.ui:ui-text:1.1.0-rc01;Apache-2.0
+Compose Graphics;androidx.compose.ui:ui-graphics:1.1.0-rc01;Apache-2.0
+Compose Unit;androidx.compose.ui:ui-unit:1.1.0-rc01;Apache-2.0
+Compose Geometry;androidx.compose.ui:ui-geometry:1.1.0-rc01;Apache-2.0
+Android Navigation Runtime Kotlin Extensions;androidx.navigation:navigation-runtime-ktx:2.4.0-rc01;Apache-2.0
+Android Navigation Runtime;androidx.navigation:navigation-runtime:2.4.0-rc01;Apache-2.0
+Android Navigation Common;androidx.navigation:navigation-common:2.4.0-rc01;Apache-2.0
+Android Navigation Common Kotlin Extensions;androidx.navigation:navigation-common-ktx:2.4.0-rc01;Apache-2.0
+Lifecycle ViewModel Compose;androidx.lifecycle:lifecycle-viewmodel-compose:2.4.0;Apache-2.0
+Compose Animation;androidx.compose.animation:animation:1.1.0-rc01;Apache-2.0
+Compose Layouts;androidx.compose.foundation:foundation-layout:1.1.0-rc01;Apache-2.0
+Compose Animation Core;androidx.compose.animation:animation-core:1.1.0-rc01;Apache-2.0
+Accompanist Insets library;com.google.accompanist:accompanist-insets:0.22.0-rc;Apache-2.0
+Accompanist System UI Controller library;com.google.accompanist:accompanist-systemuicontroller:0.22.0-rc;Apache-2.0
+Navigation Compose Hilt Integration;androidx.hilt:hilt-navigation-compose:1.0.0-alpha03;Apache-2.0
+Android Navigation Hilt Extension;androidx.hilt:hilt-navigation:1.0.0;Apache-2.0
+Hilt Android;com.google.dagger:hilt-android:2.40.5;Apache-2.0
+Support fragment;androidx.fragment:fragment:1.3.6;Apache-2.0
+Support View Pager;androidx.viewpager:viewpager:1.0.0;Apache-2.0
+Support Custom View;androidx.customview:customview:1.0.0;Apache-2.0
+Support loader;androidx.loader:loader:1.0.0;Apache-2.0
+Android Lifecycle LiveData;androidx.lifecycle:lifecycle-livedata:2.2.0;Apache-2.0
+Android Arch-Runtime;androidx.arch.core:core-runtime:2.1.0;Apache-2.0
+Hilt Core;com.google.dagger:hilt-core:2.40.5;Apache-2.0
+Dagger;com.google.dagger:dagger:2.40.5;Apache-2.0
+javax.inject;javax.inject:javax.inject:1;Apache-2.0
+FindBugs-jsr305;com.google.code.findbugs:jsr305:3.0.2;Apache-2.0
+Dagger Lint Rules AAR Distribution;com.google.dagger:dagger-lint-aar:2.40.5;Apache-2.0
+Compose Material Components;androidx.compose.material:material:1.1.0-rc01;Apache-2.0
+Compose Material Ripple;androidx.compose.material:material-ripple:1.1.0-rc01;Apache-2.0
+Compose Foundation;androidx.compose.foundation:foundation:1.1.0-rc01;Apache-2.0
+Compose Material Icons Core;androidx.compose.material:material-icons-core:1.1.0-rc01;Apache-2.0
+Compose LiveData integration;androidx.compose.runtime:runtime-livedata:1.1.0-rc01;Apache-2.0
+Compose Tooling;androidx.compose.ui:ui-tooling:1.1.0-rc01;Apache-2.0
+Compose Tooling API;androidx.compose.ui:ui-tooling-preview:1.1.0-rc01;Apache-2.0
+Compose Tooling Data;androidx.compose.ui:ui-tooling-data:1.1.0-rc01;Apache-2.0
+coil-compose;io.coil-kt:coil-compose:1.4.0;Apache-2.0
+coil-compose-base;io.coil-kt:coil-compose-base:1.4.0;Apache-2.0
+coil-base;io.coil-kt:coil-base:1.4.0;Apache-2.0
+okhttp;com.squareup.okhttp3:okhttp:4.9.0;Apache-2.0
+Okio;com.squareup.okio:okio:2.10.0;Apache-2.0
+Android Lifecycle-Common for Java 8 Language;androidx.lifecycle:lifecycle-common-java8:2.3.1;Apache-2.0
+coil;io.coil-kt:coil:1.4.0;Apache-2.0
+AboutLibraries Library;com.mikepenz:aboutlibraries-compose-android:10.0.0-b08;Apache-2.0
+Android AppCompat Library;androidx.appcompat:appcompat:1.4.0-alpha03;Apache-2.0
+Android Resources Library;androidx.appcompat:appcompat-resources:1.4.0-alpha03;Apache-2.0
+Support AnimatedVectorDrawable;androidx.vectordrawable:vectordrawable-animated:1.1.0;Apache-2.0
+Support VectorDrawable;androidx.vectordrawable:vectordrawable:1.1.0;Apache-2.0
+Support Interpolators;androidx.interpolator:interpolator:1.0.0;Apache-2.0
+Support Drawer Layout;androidx.drawerlayout:drawerlayout:1.0.0;Apache-2.0
+Support Cursor Adapter;androidx.cursoradapter:cursoradapter:1.0.0;Apache-2.0
+Palette Kotlin Extensions;androidx.palette:palette-ktx:1.0.0;Apache-2.0
+Support Palette v7;androidx.palette:palette:1.0.0;Apache-2.0
+Support core utils;androidx.legacy:legacy-support-core-utils:1.0.0;Apache-2.0
+Support Document File;androidx.documentfile:documentfile:1.0.0;Apache-2.0
+Support Local Broadcast Manager;androidx.localbroadcastmanager:localbroadcastmanager:1.0.0;Apache-2.0
+Support Print;androidx.print:print:1.0.0;Apache-2.0
+Timber (Android);com.jakewharton.timber:timber-android:5.0.0-SNAPSHOT;Apache-2.0
+Timber (JDK);com.jakewharton.timber:timber-jdk:5.0.0-SNAPSHOT;Apache-2.0
+Timber (Common);com.jakewharton.timber:timber-common:5.0.0-SNAPSHOT;Apache-2.0
+Compose Util;androidx.compose.ui:ui-util:1.1.0-rc01;Apache-2.0
+AndroidX Futures;androidx.concurrent:concurrent-futures:1.0.0;Apache-2.0
+Guava ListenableFuture only;com.google.guava:listenablefuture:1.0;Apache-2.0
+androidx.profileinstaller:profileinstaller;androidx.profileinstaller:profileinstaller:1.1.0-rc01;Apache-2.0
+Android App Startup Runtime;androidx.startup:startup-runtime:1.0.0;Apache-2.0
+Android Tracing;androidx.tracing:tracing:1.0.0;Apache-2.0
+AndroidX Autofill;androidx.autofill:autofill:1.0.0;Apache-2.0
+Collections Kotlin Extensions;androidx.collection:collection-ktx:1.1.0;Apache-2.0
+Dynamic animation Kotlin Extensions;androidx.dynamicanimation:dynamicanimation-ktx:1.0.0-alpha03;Apache-2.0
+Support DynamicAnimation;androidx.dynamicanimation:dynamicanimation:1.1.0-alpha03;Apache-2.0
+okhttp-logging-interceptor;com.squareup.okhttp3:logging-interceptor:4.9.0;Apache-2.0
+Converter: Moshi;com.squareup.retrofit2:converter-moshi:2.9.0;Apache-2.0
+Moshi;com.squareup.moshi:moshi:1.13.0;Apache-2.0
+Retrofit;com.squareup.retrofit2:retrofit:2.9.0;Apache-2.0
+Accompanist Drawable Painter library;com.google.accompanist:accompanist-drawablepainter:0.19.0;Apache-2.0
+Parcelize Runtime;org.jetbrains.kotlin:kotlin-parcelize-runtime:1.5.30;Apache-2.0
+Kotlin Android Extensions Runtime;org.jetbrains.kotlin:kotlin-android-extensions-runtime:1.5.30;Apache-2.0
+Support ExifInterface;androidx.exifinterface:exifinterface:1.3.3;Apache-2.0
+Android Emoji2 Compat view helpers;androidx.emoji2:emoji2-views-helper:1.0.0-alpha03;Apache-2.0
+Android Emoji2 Compat;androidx.emoji2:emoji2:1.0.0-alpha03;Apache-2.0
+Android Lifecycle Process;androidx.lifecycle:lifecycle-process:2.4.0-alpha02;Apache-2.0
+Android Resource Inspection - Annotations;androidx.resourceinspection:resourceinspection-annotation:1.0.0-alpha03;Apache-2.0
+AboutLibraries Library;com.mikepenz:aboutlibraries-core-android:10.0.0-b08;Apache-2.0
+
+
+LICENSES:
+
+
+ARTIFACTS WITHOUT LICENSE:
+
+
+UNKNOWN LICENSES:
+Apache-2.0
+-- [javax.inject:javax.inject:1, androidx.hilt:hilt-navigation:1.0.0, androidx.appcompat:appcompat:1.4.0-alpha03, androidx.emoji2:emoji2-views-helper:1.0.0-alpha03, androidx.palette:palette-ktx:1.0.0, androidx.drawerlayout:drawerlayout:1.0.0, androidx.compose.ui:ui-text:1.1.0-rc01, org.jetbrains:annotations:13.0, androidx.savedstate:savedstate:1.1.0, androidx.lifecycle:lifecycle-runtime-ktx:2.3.1, androidx.lifecycle:lifecycle-runtime:2.4.0-alpha02, org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.6.10, androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.1, androidx.resourceinspection:resourceinspection-annotation:1.0.0-alpha03, androidx.lifecycle:lifecycle-viewmodel:2.3.1, androidx.lifecycle:lifecycle-livedata:2.2.0, com.google.guava:listenablefuture:1.0, com.squareup.okhttp3:logging-interceptor:4.9.0, androidx.lifecycle:lifecycle-process:2.4.0-alpha02, org.jetbrains.kotlin:kotlin-stdlib:1.6.10, com.squareup.okhttp3:okhttp:4.9.0, androidx.compose.animation:animation-core:1.1.0-rc01, androidx.lifecycle:lifecycle-common:2.4.0-alpha02, io.coil-kt:coil-compose:1.4.0, androidx.cursoradapter:cursoradapter:1.0.0, androidx.print:print:1.0.0, com.squareup.okio:okio:2.10.0, androidx.compose.ui:ui-unit:1.1.0-rc01, androidx.core:core:1.7.0, androidx.compose.ui:ui-tooling-preview:1.1.0-rc01, androidx.palette:palette:1.0.0, androidx.annotation:annotation:1.3.0-alpha01, com.mikepenz:aboutlibraries-core-android:10.0.0-b08, androidx.customview:customview:1.0.0, androidx.lifecycle:lifecycle-viewmodel-savedstate:2.3.1, androidx.interpolator:interpolator:1.0.0, androidx.compose.ui:ui-graphics:1.1.0-rc01, androidx.compose.ui:ui-tooling-data:1.1.0-rc01, androidx.lifecycle:lifecycle-common-java8:2.3.1, androidx.core:core-ktx:1.7.0, androidx.exifinterface:exifinterface:1.3.3, androidx.viewpager:viewpager:1.0.0, androidx.activity:activity:1.3.1, androidx.appcompat:appcompat-resources:1.4.0-alpha03, com.google.accompanist:accompanist-drawablepainter:0.19.0, androidx.arch.core:core-common:2.1.0, androidx.collection:collection-ktx:1.1.0, com.mikepenz:aboutlibraries-compose-android:10.0.0-b08, androidx.navigation:navigation-runtime-ktx:2.4.0-rc01, org.jetbrains.kotlin:kotlin-parcelize-runtime:1.5.30, org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.6.10, androidx.compose.material:material:1.1.0-rc01, com.squareup.retrofit2:retrofit:2.9.0, androidx.concurrent:concurrent-futures:1.0.0, androidx.compose.foundation:foundation:1.1.0-rc01, androidx.autofill:autofill:1.0.0, androidx.tracing:tracing:1.0.0, com.google.dagger:hilt-core:2.40.5, androidx.activity:activity-compose:1.3.1, androidx.lifecycle:lifecycle-livedata-core:2.3.1, androidx.arch.core:core-runtime:2.1.0, androidx.compose.runtime:runtime-livedata:1.1.0-rc01, androidx.navigation:navigation-runtime:2.4.0-rc01, com.google.code.findbugs:jsr305:3.0.2, androidx.vectordrawable:vectordrawable-animated:1.1.0, androidx.compose.runtime:runtime:1.1.0-rc01, androidx.vectordrawable:vectordrawable:1.1.0, androidx.navigation:navigation-compose:2.4.0-rc01, androidx.versionedparcelable:versionedparcelable:1.1.1, org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:1.5.2, org.jetbrains.kotlinx:kotlinx-coroutines-android:1.5.2, com.squareup.moshi:moshi:1.13.0, io.coil-kt:coil:1.4.0, androidx.profileinstaller:profileinstaller:1.1.0-rc01, com.google.accompanist:accompanist-insets:0.22.0-rc, androidx.startup:startup-runtime:1.0.0, androidx.compose.material:material-ripple:1.1.0-rc01, androidx.compose.ui:ui-tooling:1.1.0-rc01, androidx.savedstate:savedstate-ktx:1.1.0, com.jakewharton.timber:timber-jdk:5.0.0-SNAPSHOT, androidx.legacy:legacy-support-core-utils:1.0.0, androidx.dynamicanimation:dynamicanimation:1.1.0-alpha03, androidx.lifecycle:lifecycle-viewmodel-compose:2.4.0, org.jetbrains.kotlin:kotlin-stdlib-common:1.6.10, androidx.compose.runtime:runtime-saveable:1.1.0-rc01, androidx.hilt:hilt-navigation-compose:1.0.0-alpha03, io.coil-kt:coil-compose-base:1.4.0, com.google.accompanist:accompanist-systemuicontroller:0.22.0-rc, androidx.compose.animation:animation:1.1.0-rc01, com.google.dagger:hilt-android:2.40.5, androidx.fragment:fragment:1.3.6, androidx.annotation:annotation-experimental:1.1.0, androidx.loader:loader:1.0.0, androidx.compose.foundation:foundation-layout:1.1.0-rc01, androidx.collection:collection:1.1.0, com.jakewharton.timber:timber-android:5.0.0-SNAPSHOT, com.google.accompanist:accompanist-swiperefresh:0.21.4-beta, io.coil-kt:coil-base:1.4.0, androidx.localbroadcastmanager:localbroadcastmanager:1.0.0, androidx.activity:activity-ktx:1.3.1, org.jetbrains.kotlin:kotlin-android-extensions-runtime:1.5.30, androidx.compose.ui:ui:1.1.0-rc01, androidx.dynamicanimation:dynamicanimation-ktx:1.0.0-alpha03, com.google.accompanist:accompanist-navigation-animation:0.22.0-rc, com.google.dagger:dagger-lint-aar:2.40.5, androidx.emoji2:emoji2:1.0.0-alpha03, androidx.navigation:navigation-common:2.4.0-rc01, androidx.navigation:navigation-common-ktx:2.4.0-rc01, androidx.compose.material:material-icons-core:1.1.0-rc01, androidx.documentfile:documentfile:1.0.0, com.google.dagger:dagger:2.40.5, androidx.compose.ui:ui-geometry:1.1.0-rc01, com.squareup.retrofit2:converter-moshi:2.9.0, com.jakewharton.timber:timber-common:5.0.0-SNAPSHOT, androidx.compose.ui:ui-util:1.1.0-rc01]

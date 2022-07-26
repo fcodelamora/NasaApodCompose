@@ -1,0 +1,9 @@
+#!/bin/bash
+RUNTASK=(`./gradlew ktlintCheck`)
+RESULT=$?
+if [ 0 -lt $RESULT ]; then
+  echo "${MESSAGES[@]}"
+  echo "failed by ktlintFormat. Please try:"
+  echo "./gradlew --continue ktlintFormat"
+fi
+exit $RESULT

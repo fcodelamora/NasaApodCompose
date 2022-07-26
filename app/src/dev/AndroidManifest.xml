@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.training.nasa.apod">
+    
+    <application
+        android:name=".DebugNasaApodApplication"
+        tools:replace="android:name">
+        <activity
+            android:name=".debug.DebugActivity"
+            android:exported="true"
+            android:launchMode="singleTop" />
+        <!-- Allow the Screen to rotate in dev to test lifecycle changes -->
+        <activity
+            android:name=".MainActivity"
+            tools:remove="android:screenOrientation" />
+    </application>
+
+</manifest>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="error_invalid_date_title">"Invalid date found"</string>
+    <string name="error_invalid_date_message">"Try another date"</string>
+</resources>
