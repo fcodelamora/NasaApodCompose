@@ -1,6 +1,7 @@
 # Agent Guide - NASA APOD
 
-This document provides guidance for agents working on the NASA APOD project.
+This document provides guidance for AI agents working on the NASA APOD project.
+You MUST ULTRATHINK your plans before following up with the execution. Additionally, you must first provide the code solution before starting to create tests. You may proceed to write tests only after the changes proposal is accepted and implemented.
 
 ## Project Overview
 
