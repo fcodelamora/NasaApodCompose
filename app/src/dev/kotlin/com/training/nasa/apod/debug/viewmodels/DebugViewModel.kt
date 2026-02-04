@@ -12,7 +12,6 @@ import com.training.nasa.apod.provide.mocks.api.debugflags.ApiErrorType
 import com.training.nasa.apod.provide.mocks.api.debugflags.MockDebugFlags
 import dagger.hilt.android.lifecycle.HiltViewModel
 import timber.log.Timber
-import timber.log.debug
 import javax.inject.Inject
 
 @HiltViewModel
@@ -56,7 +55,7 @@ class DebugViewModel @Inject constructor(
             apiErrorType = ApiErrorType.fromIndex(apiErrorTypeSelectionIndex.value)
         }
 
-        Timber.debug { "New Flags: $mockDebugFlags" }
+        Timber.d("New Flags: $mockDebugFlags")
 
         _closeDebugView.value = Event(Unit)
     }

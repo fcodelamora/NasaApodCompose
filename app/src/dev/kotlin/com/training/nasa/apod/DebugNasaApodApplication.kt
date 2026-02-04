@@ -10,7 +10,6 @@ import androidx.core.app.NotificationManagerCompat
 import com.training.nasa.apod.common.resources.ui.AppDrawable
 import com.training.nasa.apod.debug.DebugActivity
 import timber.log.Timber
-import timber.log.debug
 
 class DebugNasaApodApplication : NasaApodApplication() {
 
@@ -51,7 +50,7 @@ class DebugNasaApodApplication : NasaApodApplication() {
 
         if (channelDebug !in notificationManager.notificationChannels) {
             notificationManager.createNotificationChannel(channelDebug).also {
-                Timber.debug { "Created Notification Channel: ${channelDebug.name}" }
+                Timber.d("Created Notification Channel: ${channelDebug.name}")
             }
         }
     }

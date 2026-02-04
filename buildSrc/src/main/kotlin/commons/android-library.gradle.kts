@@ -8,6 +8,6 @@ plugins {
 }
 
 dependencies {
-    implementation(project(BuildModules.Common.RESOURCES))
-    implementation(project(BuildModules.Common.DEPENDENCY_INJECTION))
+    implementation(project(":common:resources"))
+    implementation(project(":common:di"))
 }

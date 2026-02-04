@@ -45,7 +45,6 @@ import com.training.nasa.apod.common.resources.ui.extensions.getThumbnailColorFi
 import com.training.nasa.apod.core.entities.CalendarEntry
 import com.training.nasa.apod.core.entities.PictureOfTheDay
 import timber.log.Timber
-import timber.log.debug
 import java.time.LocalDate
 
 @ExperimentalCoilApi
@@ -124,7 +123,7 @@ fun CalendarWeek(
                         .padding(1.dp)
                 )
                 else -> {
-                    Timber.debug { "Received an unsupported CalendarEntry type: ${it.javaClass.name}" }
+                    Timber.d("Received an unsupported CalendarEntry type: ${it.javaClass.name}")
                 }
             }
         }

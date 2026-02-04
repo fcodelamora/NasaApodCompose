@@ -13,7 +13,6 @@ import java.util.Locale
 import javax.inject.Inject
 import javax.inject.Singleton
 import timber.log.Timber
-import timber.log.debug
 
 @Singleton
 class MockNasaApodApi @Inject constructor(private val mockDebugFlagsRepository: IMockDebugFlagsRepository) :
@@ -39,7 +38,7 @@ class MockNasaApodApi @Inject constructor(private val mockDebugFlagsRepository: 
                 copyright = "Dummy Copyright",
                 thumbnailUrl = null
             ).also {
-                Timber.debug { it.toString() }
+                Timber.d(it.toString())
             }
         }
     }
@@ -94,7 +93,7 @@ class MockNasaApodApi @Inject constructor(private val mockDebugFlagsRepository: 
             }
 
             return response.also {
-                Timber.debug { it.toString() }
+                Timber.d(it.toString())
             }
         }
     }

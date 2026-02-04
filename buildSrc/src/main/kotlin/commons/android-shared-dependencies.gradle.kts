@@ -1,9 +1,5 @@
 package commons
 
-import Dependencies
-import Dependencies.TestAndroidDependencies
-import Dependencies.TestDependencies
-
 /**
  * Base Gradle file used by all Android module Gradle files to reduce repetition of commonly used
  * libraries
@@ -12,45 +8,47 @@ tasks.withType<Test> {
     useJUnitPlatform()
 }
 
+val libs = extensions.getByType<VersionCatalogsExtension>().named("libs")
+
 dependencies {
     // "" version of implementation is required as below plugin is not applied:
     // id("com.android.<library/app>")
 
 
-    "implementation"(Dependencies.AndroidX.APPCOMPAT)
-    "implementation"(Dependencies.AndroidX.CORE_KTX)
-    "implementation"(Dependencies.AndroidX.LIFECYCLE_RUNTIME_KTX)
-    "implementation"(Dependencies.AndroidX.LIFECYCLE_VIEWMODEL)
-    "implementation"(Dependencies.AndroidX.PALETTE)
+    "implementation"(libs.findLibrary("androidx-appcompat").get())
+    "implementation"(libs.findLibrary("androidx-core-ktx").get())
+    "implementation"(libs.findLibrary("androidx-lifecycle-runtime-ktx").get())
+    "implementation"(libs.findLibrary("androidx-lifecycle-viewmodel-ktx").get())
+    "implementation"(libs.findLibrary("androidx-palette-ktx").get())
 
-    "implementation"(Dependencies.Compose.MATERIAL)
-    "implementation"(Dependencies.Compose.RUNTIME)
-    "implementation"(Dependencies.Compose.RUNTIME_LIVEDATA)
-    "implementation"(Dependencies.Compose.UI)
-    "implementation"(Dependencies.Compose.UI_TOOLING)
-    "implementation"(Dependencies.Compose.UI_TOOLING_PREVIEW)
-    "implementation"(Dependencies.Compose.NAVIGATION)
-    "implementation"(Dependencies.Compose.LIFECYCLE_VIEWMODEL)
+    "implementation"(libs.findLibrary("androidx-compose-material").get())
+    "implementation"(libs.findLibrary("androidx-compose-runtime").get())
+    "implementation"(libs.findLibrary("androidx-compose-runtime-livedata").get())
+    "implementation"(libs.findLibrary("androidx-compose-ui").get())
+    "implementation"(libs.findLibrary("androidx-compose-ui-tooling").get())
+    "implementation"(libs.findLibrary("androidx-compose-ui-tooling-preview").get())
+    "implementation"(libs.findLibrary("androidx-navigation-compose").get())
+    "implementation"(libs.findLibrary("androidx-lifecycle-viewmodel-compose").get())
 
-    "implementation"(Dependencies.Accompanist.SWIPE_TO_REFRESH)
-    "implementation"(Dependencies.Accompanist.NAVIGATION_ANIMATION)
-    "implementation"(Dependencies.Accompanist.WINDOW_INSETS)
-    "implementation"(Dependencies.Accompanist.SYSTEM_UI_CONTROLLER)
+    "implementation"(libs.findLibrary("accompanist-swiperefresh").get())
+    "implementation"(libs.findLibrary("accompanist-navigation-animation").get())
+    "implementation"(libs.findLibrary("accompanist-insets").get())
+    "implementation"(libs.findLibrary("accompanist-systemuicontroller").get())
 
-    "implementation"(Dependencies.COIL)
-    "implementation"(Dependencies.COIL_COMPOSE_EXTENSIONS)
+    "implementation"(libs.findLibrary("coil").get())
+    "implementation"(libs.findLibrary("coil-compose").get())
 
-    "implementation"(Dependencies.LOTTIE)
+    "implementation"(libs.findLibrary("lottie-compose").get())
 
-    "implementation"(Dependencies.TIMBER_ANDROID)
+    "implementation"(libs.findLibrary("timber").get())
 
-    "testImplementation"(TestDependencies.JUPITER_API)
-    "testImplementation"(TestDependencies.JUPITER_ENGINE)
-    "testImplementation"(TestDependencies.JUPITER_PARAMS)
-    "testImplementation"(TestDependencies.MOCKITO)
-    "testImplementation"(TestDependencies.MOCKITO_KOTLIN)
+    "testImplementation"(libs.findLibrary("junit-jupiter-api").get())
+    "testImplementation"(libs.findLibrary("junit-jupiter-engine").get())
+    "testImplementation"(libs.findLibrary("junit-jupiter-params").get())
+    "testImplementation"(libs.findLibrary("mockito-core").get())
+    "testImplementation"(libs.findLibrary("mockito-kotlin").get())
 
-    "androidTestImplementation"(TestAndroidDependencies.ESPRESSO)
-    "androidTestImplementation"(TestAndroidDependencies.ANNOTATION)
+    "androidTestImplementation"(libs.findLibrary("androidx-test-espresso-core").get())
+    "androidTestImplementation"(libs.findLibrary("androidx-annotation").get())
 
 }

@@ -12,12 +12,14 @@ plugins {
     id("dagger.hilt.android.plugin")
 }
 
+val libs = extensions.getByType<VersionCatalogsExtension>().named("libs")
+
 android {
-    compileSdk = AndroidBuildConfig.COMPILE_SDK_VERSION
+    compileSdk = libs.findVersion("compileSdk").get().requiredVersion.toInt()
 
     defaultConfig {
-        minSdk = AndroidBuildConfig.MIN_SDK_VERSION
-        targetSdk = AndroidBuildConfig.TARGET_SDK_VERSION
+        minSdk = libs.findVersion("minSdk").get().requiredVersion.toInt()
+        targetSdk = libs.findVersion("targetSdk").get().requiredVersion.toInt()
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles("consumer-rules.pro")
@@ -52,13 +54,13 @@ android {
     }
 
     composeOptions {
-        kotlinCompilerExtensionVersion = Dependencies.Versions.KOTLIN_COMPILER_EXTENSION
+        kotlinCompilerExtensionVersion = libs.findVersion("compose").get().requiredVersion
     }
 
 }
 
 dependencies {
-    implementation(Dependencies.AndroidX.HILT)
-    kapt(Dependencies.AnnotationProcessors.HILT)
-    kapt(Dependencies.AnnotationProcessors.HILT_ANDROID)
+    implementation(libs.findLibrary("hilt-android").get())
+    kapt(libs.findLibrary("hilt-compiler").get())
+    kapt(libs.findLibrary("hilt-android-compiler").get())
 }

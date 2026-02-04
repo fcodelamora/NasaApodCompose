@@ -1,8 +1,5 @@
 package com.training.nasa.apod.core.entities
 
-import timber.log.Timber
-import timber.log.debug
-
 enum class AppTheme(val id: Int) {
     SYSTEM(0),
     LIGHT(1),
@@ -17,7 +14,6 @@ enum class AppTheme(val id: Int) {
                     return theme
                 }
             }
-            Timber.debug { "Invalid theme id received, fallback to SYSTEM" }
             return SYSTEM
         }
     }

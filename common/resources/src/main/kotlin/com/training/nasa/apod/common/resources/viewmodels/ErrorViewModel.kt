@@ -10,7 +10,6 @@ import com.training.nasa.apod.core.entities.ErrorViewData
 import com.training.nasa.apod.core.entities.exception.AppException
 import com.training.nasa.apod.core.usecases.IErrorView
 import timber.log.Timber
-import timber.log.debug
 
 open class ErrorViewModel(
     application: Application,
@@ -21,12 +20,12 @@ open class ErrorViewModel(
     var currentError by savedStateHandle.mutableStateOf<ErrorViewData?>(null)
 
     override fun showErrorView(errorViewData: ErrorViewData) {
-        Timber.debug { "showErrorView" }
+        Timber.d("showErrorView")
         currentError = errorViewData
     }
 
     override fun handleException(exception: Exception) {
-        Timber.debug { "handleException: $exception" }
+        Timber.d("handleException: $exception")
         val error = when (exception) {
             is AppException.GeneralApiException -> {
                 ErrorViewData(

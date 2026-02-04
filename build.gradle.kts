@@ -5,7 +5,7 @@ tasks.register("clean", Delete::class) {
 }
 
 plugins {
-    id("org.jlleitschuh.gradle.ktlint") version "10.2.1"
+    alias(libs.plugins.ktlint)
 }
 
 subprojects {

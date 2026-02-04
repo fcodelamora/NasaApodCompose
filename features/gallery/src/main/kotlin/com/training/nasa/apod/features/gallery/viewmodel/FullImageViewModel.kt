@@ -6,7 +6,6 @@ import com.training.nasa.apod.common.resources.viewmodels.ErrorViewModel
 import com.training.nasa.apod.core.entities.ErrorViewData
 import dagger.hilt.android.lifecycle.HiltViewModel
 import timber.log.Timber
-import timber.log.debug
 import javax.inject.Inject
 
 @HiltViewModel
@@ -15,7 +14,7 @@ class FullImageViewModel @Inject constructor(
     savedStateHandle: SavedStateHandle
 ) : ErrorViewModel(application, savedStateHandle) {
     fun onImageError() {
-        Timber.debug { "onImageError" }
+        Timber.d("onImageError")
         showErrorView(
             ErrorViewData(
                 title = "Error loading image",

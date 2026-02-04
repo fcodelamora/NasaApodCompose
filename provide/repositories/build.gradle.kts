@@ -10,11 +10,11 @@ android {
     val apiKeyKey = "API_KEY"
     val apiKeyLocalProperty = "apiKeys.nasaApiKey"
 
-    flavorDimensions += setOf(AndroidBuildConfig.ProductDimensions.ENVIRONMENT)
+    flavorDimensions += setOf("environment")
 
     productFlavors {
         create("product") {
-            dimension = AndroidBuildConfig.ProductDimensions.ENVIRONMENT
+            dimension = "environment"
             buildConfigField("String", baseUrlKey, baseUrlValue)
             buildConfigField(
                 "String",
@@ -23,7 +23,7 @@ android {
             )
         }
         create("qa") {
-            dimension = AndroidBuildConfig.ProductDimensions.ENVIRONMENT
+            dimension = "environment"
             buildConfigField("String", baseUrlKey, baseUrlValue)
             buildConfigField(
                 "String",
@@ -32,7 +32,7 @@ android {
             )
         }
         create("dev") {
-            dimension = AndroidBuildConfig.ProductDimensions.ENVIRONMENT
+            dimension = "environment"
             buildConfigField("String", baseUrlKey, baseUrlValue)
             buildConfigField(
                 "String",
@@ -44,11 +44,11 @@ android {
 }
 
 dependencies {
-    implementation(project(BuildModules.Core.REPOSITORIES))
-    implementation(project(BuildModules.Core.APIS))
-    implementation(project(BuildModules.Core.ENTITIES))
-    implementation(project(BuildModules.Core.DATASOURCES))
+    implementation(project(":core:repositories"))
+    implementation(project(":core:apis"))
+    implementation(project(":core:entities"))
+    implementation(project(":core:datasources"))
 
     // Via Hilt injection
-    implementation(project(BuildModules.Provide.DATASOURCES))
+    implementation(project(":provide:datasources"))
 }

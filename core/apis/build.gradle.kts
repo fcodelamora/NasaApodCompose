@@ -6,15 +6,15 @@ plugins {
 }
 
 dependencies {
-    implementation(Dependencies.RETROFIT)
-    implementation(Dependencies.RETROFIT_CONVERTER)
+    implementation(libs.retrofit)
+    implementation(libs.retrofit.converter.moshi)
 
-    implementation(Dependencies.OKHTTP_LOGGING)
+    implementation(libs.okhttp.logging.interceptor)
 
-    implementation(Dependencies.MOSHI)
+    implementation(libs.moshi)
 
-    kapt(Dependencies.MOSHI_CODEGEN)
+    kapt(libs.moshi.kotlin.codegen)
 
     // Testing
-    kaptTest(Dependencies.MOSHI_CODEGEN)
+    kaptTest(libs.moshi.kotlin.codegen)
 }

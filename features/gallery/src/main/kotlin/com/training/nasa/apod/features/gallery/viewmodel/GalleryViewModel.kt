@@ -19,7 +19,6 @@ import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import timber.log.Timber
-import timber.log.debug
 import java.time.LocalDate
 import java.time.Month
 import javax.inject.Inject
@@ -119,7 +118,7 @@ class GalleryViewModel @Inject constructor(
     }
 
     fun onYearSelected(year: Int) {
-        Timber.debug { "onYearSelected $year" }
+        Timber.d("onYearSelected $year")
         disabledMonths = getDisabledMonthsForYear(year)
         selectedMonth = null
         selectedYear = year
@@ -142,12 +141,12 @@ class GalleryViewModel @Inject constructor(
         }
 
         return disabledMonths.also {
-            Timber.debug { "disabled months: $disabledMonths" }
+            Timber.d("disabled months: $disabledMonths")
         }
     }
 
     fun onMonthSelected(month: Month) {
-        Timber.debug { "onMonthSelected $month.name" }
+        Timber.d("onMonthSelected $month.name")
         viewModelScope.run {
             calendarEntries = emptyList()
             requestPicturesOfTheDayForMonth(selectedYear, month)

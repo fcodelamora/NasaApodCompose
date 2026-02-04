@@ -3,6 +3,6 @@ plugins {
 }
 
 dependencies {
-    implementation(project(BuildModules.Core.REPOSITORIES))
-    implementation(project(BuildModules.Core.USECASES))
+    implementation(project(":core:repositories"))
+    implementation(project(":core:usecases"))
 }

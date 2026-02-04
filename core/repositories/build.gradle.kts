@@ -4,7 +4,7 @@ plugins {
 }
 
 dependencies {
-    implementation(project(BuildModules.Core.ENTITIES))
-    implementation(project(BuildModules.Core.APIS))
-    implementation(project(BuildModules.Core.DATASOURCES))
+    implementation(project(":core:entities"))
+    implementation(project(":core:apis"))
+    implementation(project(":core:datasources"))
 }

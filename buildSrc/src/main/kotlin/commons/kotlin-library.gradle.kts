@@ -1,8 +1,5 @@
 package commons
 
-import Dependencies
-import Dependencies.TestDependencies
-
 /**
  * Base Gradle file used by all Kotlin Gradle files (Ex. Modules at `:core`) to reduce repetition
  * of shared attributes.
@@ -15,14 +12,16 @@ tasks.withType<Test> {
     useJUnitPlatform()
 }
 
+val libs = extensions.getByType<VersionCatalogsExtension>().named("libs")
+
 dependencies {
-    add("implementation", Dependencies.Kotlin.COROUTINES)
+    "implementation"(libs.findLibrary("kotlinx-coroutines-core").get())
 
-    add("implementation", Dependencies.TIMBER_JDK)
+    "implementation"(libs.findLibrary("timber").get())
 
-    "testImplementation"(TestDependencies.JUPITER_API)
-    "testImplementation"(TestDependencies.JUPITER_ENGINE)
-    "testImplementation"(TestDependencies.JUPITER_PARAMS)
-    "testImplementation"(TestDependencies.MOCKITO)
-    "testImplementation"(TestDependencies.MOCKITO_KOTLIN)
+    "testImplementation"(libs.findLibrary("junit-jupiter-api").get())
+    "testImplementation"(libs.findLibrary("junit-jupiter-engine").get())
+    "testImplementation"(libs.findLibrary("junit-jupiter-params").get())
+    "testImplementation"(libs.findLibrary("mockito-core").get())
+    "testImplementation"(libs.findLibrary("mockito-kotlin").get())
 }

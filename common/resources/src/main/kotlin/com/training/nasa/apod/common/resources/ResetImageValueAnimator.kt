@@ -5,7 +5,6 @@ import android.animation.ValueAnimator
 import androidx.compose.ui.geometry.Offset
 import kotlin.math.abs
 import timber.log.Timber
-import timber.log.debug
 
 object ResetImageValueAnimator {
 
@@ -37,11 +36,11 @@ object ResetImageValueAnimator {
                         (startValue[1] * invertedFraction),
                         (startValue[2] * invertedFraction)
                     ).also {
-                        Timber.debug {
+                        Timber.d(
                             "fraction: $fraction, " +
                                 "startValue: ${startValue.toList()}, " +
                                 "endValue: ${it.toList()}"
-                        }
+                        )
                     }
                 } ?: return forcedEndValue
             }

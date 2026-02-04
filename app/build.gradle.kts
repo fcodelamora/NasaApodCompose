@@ -1,22 +1,22 @@
 plugins {
     id("com.android.application")
     id("commons.android-shared-dependencies")
-    kotlin("android")
+    id("org.jetbrains.kotlin.android")
     kotlin("kapt")
     id("com.mikepenz.aboutlibraries.plugin")
     id("dagger.hilt.android.plugin")
 }
 
 android {
-    compileSdk = AndroidBuildConfig.COMPILE_SDK_VERSION
+    compileSdk = libs.versions.compileSdk.get().toInt()
 
     defaultConfig {
-        applicationId = AndroidBuildConfig.APPLICATION_ID
+        applicationId = "com.training.nasa.apod"
 
-        minSdk = AndroidBuildConfig.MIN_SDK_VERSION
-        targetSdk = AndroidBuildConfig.TARGET_SDK_VERSION
-        versionCode = AndroidBuildConfig.VERSION_CODE
-        versionName = AndroidBuildConfig.VERSION_NAME
+        minSdk = libs.versions.minSdk.get().toInt()
+        targetSdk = libs.versions.targetSdk.get().toInt()
+        versionCode = libs.versions.versionCode.get().toInt()
+        versionName = libs.versions.versionName.get()
     }
 
     signingConfigs {
@@ -33,7 +33,7 @@ android {
     }
 
     composeOptions {
-        kotlinCompilerExtensionVersion = Dependencies.Versions.KOTLIN_COMPILER_EXTENSION
+        kotlinCompilerExtensionVersion = libs.versions.compose.get()
     }
 
     android.sourceSets.all {
@@ -54,7 +54,7 @@ android {
         }
     }
 
-    flavorDimensions += setOf(AndroidBuildConfig.ProductDimensions.ENVIRONMENT)
+    flavorDimensions += setOf("environment")
 
     productFlavors {
 
@@ -81,30 +81,30 @@ android {
 }
 
 dependencies {
-    implementation(project(BuildModules.Core.ENTITIES))
-    implementation(project(BuildModules.Core.USECASES))
+    implementation(project(":core:entities"))
+    implementation(project(":core:usecases"))
 
-    implementation(project(BuildModules.Common.RESOURCES))
-    implementation(project(BuildModules.Common.DEPENDENCY_INJECTION))
+    implementation(project(":common:resources"))
+    implementation(project(":common:di"))
 
-    // implementation(project(BuildModules.Provide.SYSTEMS)) currently, no systems in use
+    // implementation(project(":provide:systems")) currently, no systems in use
 
-    implementation(project(BuildModules.Features.GALLERY))
+    implementation(project(":features:gallery"))
 
-    implementation(Dependencies.Compose.HILT_NAVIGATION)
-    implementation(Dependencies.Compose.ACTIVITY)
+    implementation(libs.androidx.hilt.navigation.compose)
+    implementation(libs.androidx.activity.compose)
 
-    implementation(Dependencies.ABOUT_LIBRARIES_UI)
+    implementation(libs.aboutlibraries.compose)
 
-    implementation(Dependencies.AndroidX.HILT)
-    kapt(Dependencies.AnnotationProcessors.HILT)
-    kapt(Dependencies.AnnotationProcessors.HILT_ANDROID)
+    implementation(libs.hilt.android)
+    kapt(libs.hilt.compiler)
+    kapt(libs.hilt.android.compiler)
 
     // Required by Hilt
-    implementation(project(BuildModules.Provide.REPOSITORIES))
+    implementation(project(":provide:repositories"))
 
     // Differentiate between real and mock dependencies.
-    "productImplementation"(project(BuildModules.Provide.APIS))
-    "qaImplementation"(project(BuildModules.Provide.APIS))
-    "devImplementation"(project(BuildModules.Provide.Mocks.APIS))
+    "productImplementation"(project(":provide:apis"))
+    "qaImplementation"(project(":provide:apis"))
+    "devImplementation"(project(":provide:mocks:apis"))
 }

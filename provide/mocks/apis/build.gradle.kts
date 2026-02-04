@@ -3,5 +3,5 @@ plugins {
 }
 
 dependencies {
-    implementation(project(BuildModules.Core.ENTITIES))
+    implementation(project(":core:entities"))
 }

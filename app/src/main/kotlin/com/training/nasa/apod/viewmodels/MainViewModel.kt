@@ -17,7 +17,6 @@ import com.training.nasa.apod.core.usecases.feature.settings.IStoreUserPreferenc
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
 import timber.log.Timber
-import timber.log.debug
 import javax.inject.Inject
 
 @HiltViewModel
@@ -73,7 +72,7 @@ class MainViewModel @Inject constructor(
     fun updateUserPreferences(preferences: UserPreferences) {
         userPreferences = preferences
         viewModelScope.launch {
-            Timber.debug { "updateUserPreferences: $userPreferences" }
+            Timber.d("updateUserPreferences: $userPreferences")
             val useCase =
                 useCaseProvider.provideStoreUserPreferencesUseCase(this@MainViewModel)
             useCase.execute(userPreferences)

@@ -13,7 +13,6 @@ import com.training.nasa.apod.core.entities.exception.AppException
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 import timber.log.Timber
-import timber.log.debug
 
 @HiltViewModel
 class ImageDetailsViewModel @Inject constructor(
@@ -44,7 +43,7 @@ class ImageDetailsViewModel @Inject constructor(
             try {
                 context.startActivity(intent)
             } catch (exception: Exception) {
-                Timber.debug { exception.toString() }
+                Timber.d(exception.toString())
                 handleException(AppException.ExternalBrowserLaunchException)
             }
         }

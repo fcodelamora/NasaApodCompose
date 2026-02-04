@@ -5,7 +5,6 @@ import com.training.nasa.apod.core.repository.IPictureOfTheDayRepository
 import com.training.nasa.apod.core.usecases.IErrorView
 import com.training.nasa.apod.core.usecases.IProgressView
 import timber.log.Timber
-import timber.log.debug
 import java.text.ParseException
 import java.time.LocalDate
 import java.time.Month
@@ -53,8 +52,8 @@ class GetPicturesOfTheDayForMonthUseCase(
             val startDate = searchDateStart.format(DateTimeFormatter.ofPattern("yyyy-MM-dd"))
             val endDate = searchDateEnd.format(DateTimeFormatter.ofPattern("yyyy-MM-dd"))
 
-            Timber.debug { "Formatted startDate : $startDate" }
-            Timber.debug { "Formatted endDate : $endDate" }
+            Timber.d("Formatted startDate : $startDate")
+            Timber.d("Formatted endDate : $endDate")
 
             val picturesOfTheDay = pictureOfTheDayRepository.getPicturesOfTheDayByDateRange(
                 startDate = startDate,
